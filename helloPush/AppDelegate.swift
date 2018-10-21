@@ -8,15 +8,42 @@
 
 import UIKit
 import CoreData
+import UserNotifications
+import Firebase
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        let token = deviceToken.map{String(format: "%02.2hhx", $0)}.joined()
+        print("token: \(token)")
+    }
+    
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        
+    }
 
-
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping
+        (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.alert, .sound])
+        print("deneme")
+    }
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        if response.notification.request.identifier == "TestIdentifier"{
+            print("handling notification with the identifier 'testIdentifier'")
+        }
+    }
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        FirebaseApp.configure()
+        UNUserNotificationCenter.current().requestAuthorization(options:
+            [.alert, .badge, .sound], completionHandler: {(granted, error) in
+                print("granted: \(granted)")
+        })
+        
+        UIApplication.shared.registerForRemoteNotifications()
+        
         return true
     }
 
