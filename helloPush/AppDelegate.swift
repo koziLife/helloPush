@@ -31,12 +31,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         print("deneme")
     }
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        if response.notification.request.identifier == "TestIdentifier"{
-            print("handling notification with the identifier 'testIdentifier'")
+        let userInfo = response.notification.request.content.userInfo
+        if let messageID = userInfo["key1"] {
+            print("Message ID: \(messageID)")
         }
+        
+        let aps = userInfo["aps"] as! Dictionary<String, Any>
+        let alert = aps["alert"] as! String
+
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let second = sb.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
+        window?.rootViewController = second
+        
+        if let rootViewController = window?.rootViewController as? SecondViewController {
+            rootViewController.loadText(text: alert)
+        }
+        
+        // Print full message.
+        print(userInfo)
+        
+        completionHandler()
     }
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
+        UNUserNotificationCenter.current().delegate = self
+        
         UNUserNotificationCenter.current().requestAuthorization(options:
             [.alert, .badge, .sound], completionHandler: {(granted, error) in
                 print("granted: \(granted)")
@@ -45,6 +64,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         UIApplication.shared.registerForRemoteNotifications()
         
         return true
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
+        print("did receive remote notification")
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

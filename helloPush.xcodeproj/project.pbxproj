@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		692454D0913B259824F41457 /* Pods_helloPush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39E2431F66A60D7FAD13410A /* Pods_helloPush.framework */; };
+		AC444BB8217D2BF1002CC504 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC444BB7217D2BF1002CC504 /* SecondViewController.swift */; };
 		C710EDE6217BC71F00E44E96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C710EDE5217BC71F00E44E96 /* AppDelegate.swift */; };
 		C710EDE8217BC71F00E44E96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C710EDE7217BC71F00E44E96 /* ViewController.swift */; };
 		C710EDEB217BC71F00E44E96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C710EDE9217BC71F00E44E96 /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 		4E3B34D11E846A54F61FA040 /* Pods-helloPushUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-helloPushUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-helloPushUITests/Pods-helloPushUITests.release.xcconfig"; sourceTree = "<group>"; };
 		88EB2D679200254BA4391315 /* Pods-helloPush.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-helloPush.release.xcconfig"; path = "Pods/Target Support Files/Pods-helloPush/Pods-helloPush.release.xcconfig"; sourceTree = "<group>"; };
 		959E56FC3790AF83BBD669CD /* Pods-helloPushUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-helloPushUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-helloPushUITests/Pods-helloPushUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AC444BB7217D2BF1002CC504 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		BADDD0C4A98DD92DA3C337AC /* Pods-helloPushTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-helloPushTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-helloPushTests/Pods-helloPushTests.release.xcconfig"; sourceTree = "<group>"; };
 		C710EDE2217BC71F00E44E96 /* helloPush.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = helloPush.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C710EDE5217BC71F00E44E96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				C710EDF4217BC72000E44E96 /* Info.plist */,
 				C710EDEC217BC71F00E44E96 /* helloPush.xcdatamodeld */,
 				C71F6FA3217D1B3A0017043D /* GoogleService-Info.plist */,
+				AC444BB7217D2BF1002CC504 /* SecondViewController.swift */,
 			);
 			path = helloPush;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC444BB8217D2BF1002CC504 /* SecondViewController.swift in Sources */,
 				C710EDE8217BC71F00E44E96 /* ViewController.swift in Sources */,
 				C710EDEE217BC71F00E44E96 /* helloPush.xcdatamodeld in Sources */,
 				C710EDE6217BC71F00E44E96 /* AppDelegate.swift in Sources */,

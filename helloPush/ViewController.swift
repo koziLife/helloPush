@@ -11,21 +11,22 @@ import UserNotifications
 
 class ViewController: UIViewController {
 
+    var labelText : String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let content = UNMutableNotificationContent()
-        content.title = "Title"
-        content.body = "Body"
-        content.sound = UNNotificationSound.default()
-        
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
-        
-        let request = UNNotificationRequest(identifier: "TestIdentifier", content: content, trigger: trigger)
-        
-        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
     }
 
-
+    func loadLabel(text: String) {
+        labelText = text
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = sender as? SecondViewController {
+            vc.loadText(text: labelText)
+        }
+        
+        performSegue(withIdentifier: "To_Second", sender: nil)
+    }
 }
 
