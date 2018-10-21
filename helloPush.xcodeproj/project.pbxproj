@@ -16,7 +16,7 @@
 		C710EDF3217BC72000E44E96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C710EDF1217BC72000E44E96 /* LaunchScreen.storyboard */; };
 		C710EDFE217BC72000E44E96 /* helloPushTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C710EDFD217BC72000E44E96 /* helloPushTests.swift */; };
 		C710EE09217BC72000E44E96 /* helloPushUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C710EE08217BC72000E44E96 /* helloPushUITests.swift */; };
-		C710EE1A217C6D1500E44E96 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C710EE19217C6D1500E44E96 /* GoogleService-Info.plist */; };
+		C71F6FA4217D1B3A0017043D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C71F6FA3217D1B3A0017043D /* GoogleService-Info.plist */; };
 		C8379459383897AF7A2938E8 /* Pods_helloPushTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D8FDD1C3C3F915661E4D2BE /* Pods_helloPushTests.framework */; };
 		F87552CFD7BDF77D2C82A2DD /* Pods_helloPushUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE8ED7910BFB3DF821E7405F /* Pods_helloPushUITests.framework */; };
 /* End PBXBuildFile section */
@@ -60,7 +60,7 @@
 		C710EE08217BC72000E44E96 /* helloPushUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helloPushUITests.swift; sourceTree = "<group>"; };
 		C710EE0A217BC72000E44E96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C710EE18217BDAC500E44E96 /* helloPush.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = helloPush.entitlements; sourceTree = "<group>"; };
-		C710EE19217C6D1500E44E96 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C71F6FA3217D1B3A0017043D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CC3BD77ABCF4A1D00CED4233 /* Pods-helloPushTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-helloPushTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-helloPushTests/Pods-helloPushTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D97A1D9BC02D87970B31A8EF /* Pods-helloPush.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-helloPush.debug.xcconfig"; path = "Pods/Target Support Files/Pods-helloPush/Pods-helloPush.debug.xcconfig"; sourceTree = "<group>"; };
 		EE8ED7910BFB3DF821E7405F /* Pods_helloPushUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_helloPushUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,7 +150,7 @@
 				C710EDF1217BC72000E44E96 /* LaunchScreen.storyboard */,
 				C710EDF4217BC72000E44E96 /* Info.plist */,
 				C710EDEC217BC71F00E44E96 /* helloPush.xcdatamodeld */,
-				C710EE19217C6D1500E44E96 /* GoogleService-Info.plist */,
+				C71F6FA3217D1B3A0017043D /* GoogleService-Info.plist */,
 			);
 			path = helloPush;
 			sourceTree = "<group>";
@@ -290,7 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C710EDF3217BC72000E44E96 /* LaunchScreen.storyboard in Resources */,
-				C710EE1A217C6D1500E44E96 /* GoogleService-Info.plist in Resources */,
+				C71F6FA4217D1B3A0017043D /* GoogleService-Info.plist in Resources */,
 				C710EDF0217BC72000E44E96 /* Assets.xcassets in Resources */,
 				C710EDEB217BC71F00E44E96 /* Main.storyboard in Resources */,
 			);
